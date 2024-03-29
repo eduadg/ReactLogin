@@ -27,15 +27,15 @@
 
 
     <script type="text/babel">
-        function Titulo() {
+        function Titulo({children}) {
             return (
-                <h1 className="form__titulo" >Login</h1>
+                <h1 className="form__titulo">{children}</h1>
             )
         }
 
-        function Subtitulo() {
+        function Subtitulo({children}) {
             return (
-                <h1 className="form__texto">Boas-vindas! Faça seu login.</h1>
+                <h1 className="form__texto">{children}</h1>
             )
         }
 
@@ -51,9 +51,9 @@
             )
         }
 
-        function Botao(){
+        function Botao({children}){
             return(
-                <button className = "form__botao" type= "submit" >Login</button>
+                <button className = "form__botao" type= "submit" >{children}</button>
             )
         }
 
@@ -64,8 +64,8 @@
                     <img src="./img/imagem-login.png" alt="dasdsada" />
                     <section>
                         <form>
-                            <Titulo />
-                            <Subtitulo />
+                            <Titulo> Titulo </Titulo>
+                            <Subtitulo> Boas-vindas! Faça seu login. </Subtitulo>
                             <CampoDigitacao
                             label = "email ou usuario"
                             type = "email"
@@ -76,7 +76,7 @@
                             type="password"
                             placeholder="digite sua senha..."
                             />
-                            <Botao/>
+                            <Botao>Login</Botao>
                         </form>
                     </section>
                 </div>
