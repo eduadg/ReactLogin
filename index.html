@@ -39,6 +39,25 @@
             )
         }
 
+        function CampoDigitacao({label, type, placeholder}){
+            return(
+                <div className= "form__campo-digitacao">
+                    <label htmlFor={type}>{label}</label>
+                    <input type={type}
+                    placeholder= {placeholder}
+                    required
+                    id={type}/>
+                </div>
+            )
+        }
+
+        function Botao(){
+            return(
+                <button className = "form__botao" type= "submit" >Login</button>
+            )
+        }
+
+
         function PaginaLogin() {
             return (
                 <div className="container-login">
@@ -47,20 +66,17 @@
                         <form>
                             <Titulo />
                             <Subtitulo />
-                            <div className= "form__campo-digitacao">
-                                <label for="email">E-mail ou Usuário</label>
-                                <input type="email"
-                                placeholder= "digite o e-mail ou usuário"
-                                required
-                                id='email'/>
-                            </div>
-                            <div className = "form__campo-digitacao">
-                                <label for="senha">Senha</label>
-                                <input type="password"
-                                placeholder ='digite sua senha...'
-                                required
-                                id="senha"/>
-                            </div>
+                            <CampoDigitacao
+                            label = "email ou usuario"
+                            type = "email"
+                            placeholder = "digite seu Email ou usuário"
+                            />
+                            <CampoDigitacao
+                            label="senha"
+                            type="password"
+                            placeholder="digite sua senha..."
+                            />
+                            <Botao/>
                         </form>
                     </section>
                 </div>
