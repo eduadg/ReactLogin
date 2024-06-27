@@ -29,13 +29,18 @@
     <script type="text/babel">
         function Titulo({children}) {
             return (
+<<<<<<< HEAD
                 <h1 className="form__titulo" >{children}</h1>
+=======
+                <h1 className="form__titulo">{children}</h1>
+>>>>>>> 342a1aa40486a7a7da660797938438c704e23b30
             )
         }
 
         function Subtitulo({children}) {
             return (
                 <h1 className="form__texto">{children}</h1>
+<<<<<<< HEAD
             )
         }
  
@@ -59,8 +64,29 @@
         function Botao({children}) {
             return(
                 <button type = "submit" className= "form__botao">{children}</button>
+=======
+>>>>>>> 342a1aa40486a7a7da660797938438c704e23b30
             )
         }
+
+        function CampoDigitacao({label, type, placeholder}){
+            return(
+                <div className= "form__campo-digitacao">
+                    <label htmlFor={type}>{label}</label>
+                    <input type={type}
+                    placeholder= {placeholder}
+                    required
+                    id={type}/>
+                </div>
+            )
+        }
+
+        function Botao({children}){
+            return(
+                <button className = "form__botao" type= "submit" >{children}</button>
+            )
+        }
+
 
         function PaginaLogin() {
             //let email = "test@test.com";
@@ -78,6 +104,7 @@
                 <div className="container-login">
                     <img src="./img/imagem-login.png" alt="dasdsada" />
                     <section>
+<<<<<<< HEAD
                         <form onSubmit = {handleSubimit}>
                             <Titulo> Login </Titulo>
                             <Subtitulo>Boas-vindas! Faça seu login. </Subtitulo> 
@@ -96,6 +123,22 @@
                             setValor={setPassword}
                             />
                             <Botao> Login </Botao>
+=======
+                        <form>
+                            <Titulo> Titulo </Titulo>
+                            <Subtitulo> Boas-vindas! Faça seu login. </Subtitulo>
+                            <CampoDigitacao
+                            label = "email ou usuario"
+                            type = "email"
+                            placeholder = "digite seu Email ou usuário"
+                            />
+                            <CampoDigitacao
+                            label="senha"
+                            type="password"
+                            placeholder="digite sua senha..."
+                            />
+                            <Botao>Login</Botao>
+>>>>>>> 342a1aa40486a7a7da660797938438c704e23b30
                         </form>
                     </section>
                 </div>
